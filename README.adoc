@@ -2,7 +2,7 @@
 
 AOthello offers an easy to use API for testing your othello playing AI.
 
-image::screenshot.png[]
+image::screenshot.jpg[]
 
 === Dependencies
 
