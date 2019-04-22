@@ -2,6 +2,8 @@
 
 AOthello offers an easy to use API for testing your othello playing AI.
 
+image::screenshot.png[]
+
 === Dependencies
 
 - https://www.python.org/downloads/[Python 3.x]
