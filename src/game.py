@@ -10,6 +10,7 @@ class Game:
     def __init__(self, screen_width, screen_height):
             pygame.init()
             pygame.font.init()
+            pygame.display.set_caption('AOthello')
 
             self.screen = pygame.display.set_mode((screen_width, screen_height))
             self.screen_width = screen_width
