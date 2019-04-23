@@ -6,11 +6,10 @@ class IPlayer():
     @classmethod
     def __init__(self):
         self.parent = None
-        self.board = None
 
     @classmethod
-    def run(self, board):
-        move = self.get_move(self, board)
+    def run(self, board, viable_moves):
+        move = self.make_move(self, board, viable_moves)
         if self.parent:
             self.parent.move_played_callback(move)
 
@@ -18,9 +17,5 @@ class IPlayer():
     def set_parent(self, parent):
         self.parent = parent
 
-    @classmethod
-    def set_board(self, board):
-        self.board = board
-
     @abstractmethod
-    def get_move(self, board): raise NotImplementedError
+    def make_move(self, board, viable_moves): raise NotImplementedError

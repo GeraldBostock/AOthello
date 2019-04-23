@@ -40,7 +40,7 @@ class Game:
 
             if not self.player_currently_playing:
                 self.player_currently_playing = True
-                thread = threading.Thread(target=self.players[self.current_player_index].run, args=(self.board,))
+                thread = threading.Thread(target=self.players[self.current_player_index].run, args=(self.board, self.board.get_viable_moves()))
                 thread.start()
 
             self.board.render_board(self.screen, (self.board_offset, self.board_offset))

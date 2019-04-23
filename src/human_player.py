@@ -4,7 +4,8 @@ import pygame
 
 class HumanPlayer(IPlayer):
 
-    def get_move(self, board):
+    def make_move(self, board, viable_moves):
+
         while True:
             pos = pygame.mouse.get_pos()
             pressed1, pressed2, pressed3 = pygame.mouse.get_pressed()
@@ -13,4 +14,3 @@ class HumanPlayer(IPlayer):
 
                 if cell_index and board.is_move_viable(cell_index):
                     return cell_index
-        return (0, 5)

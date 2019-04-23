@@ -162,6 +162,8 @@ class Board:
 
         return False
 
+    def get_viable_moves(self):
+        return self.viable_moves
 
     def get_direction_offset(self, direction):
 
