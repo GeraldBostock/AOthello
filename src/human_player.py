@@ -1,8 +1,8 @@
-from player import IPlayer
+import player
 import time
 import pygame
 
-class HumanPlayer(IPlayer):
+class HumanPlayer(player.IPlayer):
 
     def make_move(self, board, viable_moves):
 
@@ -14,3 +14,5 @@ class HumanPlayer(IPlayer):
 
                 if cell_index and board.is_move_viable(cell_index):
                     return cell_index
+                
+        return False

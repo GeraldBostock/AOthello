@@ -17,5 +17,9 @@ class IPlayer():
     def set_parent(self, parent):
         self.parent = parent
 
+    @classmethod
+    def set_color(self, color):
+        self.color = color
+
     @abstractmethod
     def make_move(self, board, viable_moves): raise NotImplementedError
