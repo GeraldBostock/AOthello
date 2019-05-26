@@ -17,7 +17,6 @@ class AIPlayer(player.IPlayer):
         self.model.load_state_dict(torch.load('model_augmented.pt'))
 
         cnn_input = torch.from_numpy(self.format_input(self, board, viable_moves))
-        #print(cnn_input.float())
         time.sleep(1)
 
         output = self.model(cnn_input.float()).detach().numpy()

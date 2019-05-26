@@ -141,11 +141,10 @@ class Board:
                     if self.board[i][j] == Cells.black:
                         piece_color = colors.BLACK
                     
+                    pygame.draw.circle(screen, piece_color, [int(position_x), int(position_y)], int(self.board_render_width / (self.board_width * 2) - 2))
                     if last_played_piece:
                         if i == last_played_piece[0] and j == last_played_piece[1]:
-                            piece_color = colors.BLUE
-
-                    pygame.draw.circle(screen, piece_color, [int(position_x), int(position_y)], int(self.board_render_width / (self.board_width * 2) - 2))
+                            pygame.draw.circle(screen, colors.BLUE, [int(position_x), int(position_y)], int(self.board_render_width / (self.board_width * 2) - 2), 5)
 
         # Highlight viable positions
         for move in self.viable_moves:

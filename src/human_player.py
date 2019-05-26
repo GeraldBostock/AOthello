@@ -6,7 +6,7 @@ class HumanPlayer(player.IPlayer):
 
     def make_move(self, board, viable_moves):
 
-        while True:
+        while not self.done:
             pos = pygame.mouse.get_pos()
             pressed1, pressed2, pressed3 = pygame.mouse.get_pressed()
             if pressed1:
